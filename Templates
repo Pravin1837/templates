@@ -1,0 +1,1641 @@
+=====================================================================================
+Terminate Account-
+
+We are sorry to hear that you want to cancel your account. Is there something we could have done better and can we do anything to convince you to stay?
+
+(Kindly reply to this ticket even if you still wish your account closed.)
+
+We are looking forward hearing from you :)
+
+=====================================================================================
+
+
+=====================================================================================
+Steps to flushdns
+On your keyboard, press Win+X to open the WinX Menu.
+Right-click Command Prompt and select Run as Administrator.
+
+Run the following command:
+
+ipconfig /flushdns
+
+=====================================================================================
+The nameservers to point to the nameservers listed below.
+
+
+Nameserver 1: in.solidhosting.pro (103.27.232.40)
+Nameserver 2: eu.solidhosting.pro (109.163.228.39)
+Nameserver 3: sg.solidhosting.pro (167.99.71.43)
+Nameserver 4: us.solidhosting.pro (159.89.159.224)
+=====================================================================================
+https code for .htaccess-
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+=====================================================================================
+SMTP code for email-
+
+<?php
+require_once "/home/username/php/Mail.php";
+
+$from = "Sandra Sender <noreply@domaname>";
+$to = "Ramona Recipient <test.domainname@gmail.com>";
+
+$subject = "Hi!";
+
+$body = "Hi,\n\nHow are you?";
+$host = "mail.domainname";
+$port = "25";
+$username = "test@domainname";
+$password = "2tm1xVS86r13";
+$headers = array ('From' => $from,
+'To' => $to,
+'Subject' => $subject);
+$smtp = Mail::factory('smtp',
+array ('host' => $host,
+'port' => $port,
+'auth' => true,
+'username' => $username,
+'password' => $password));
+$mail = $smtp->send($to, $headers, $body);
+if (PEAR::isError($mail)) {
+echo("<p>" . $mail->getMessage() . "</p>");
+} else {
+echo("<p>Message successfully sent!</p>");
+}
+
+?>
+=====================================================================================
+
+Email login:-
+supp0rttestx247@gmail.com
+3ggJk4Ep]
+
+supp0rttestx247@outlook.com
+3ggJk4Ep]
+
+supp0rttestx247@hotmail.com
+3ggJk4Ep]
+
+test.milesweb@gmail.com
+3ggJk4Ep]
+
+mileswebtest@yahoo.com
+3ggJk4Ep]
+
+supp0rttestx247@rediffmail.com
+3ggJk4Ep]
+=====================================================================================
+cPanel to cPanel migration
+
+Client provides us old host cpanel login details to migrate website to our server.
+So follow below steps to migrate the account.
+
+1) Login to cpanel using credentials provided by client.
+2) Go to Files >> Backup
+3) Under Full Backup click on Download a Full website backup
+4) From Backup Destination select "Remote FTP server"
+5) Add email address as support@milesweb.com
+6)Add our server IP in Remote server and use below ftp username and ftp password
+
+UserName: mwadmin
+PassWord: Fty5VOydre1K
+
+7) Add FTP port 21 and click on Generate backup button.
+
+This will start the full backup of account.
+
+8) Click on go back and it will show you backup in progress.
+9) Refresh the page after certain time intervals to check if backup is completed.
+If it is showing green check mark it means backup is completed and transferring through FTP to our server.
+
+Once file transfer gets completed the file will get disappear from cpanel and you will receive email at support@milesweb.com
+
+Then Go to our server via SSH and go to path /home/mwadmin/
+Here you will find backup file like backup-name.tar.gz
+
+Open screen and run below command to restore the file
+
+/scripts/restorepkg backup-name.tar.gz
+
+Once restoration gets complete you will find a cpanel accountin WHM panel.
+
+If it is a reseller migration assign ownership of reseller to that account from WHM using modify account.
+
+
+=====================================================================================
+
+For Allowing IP for cpanel WHM on node
+1. ssh root@103.86.176.100 -p 22999
+
+ (login to node)
+2. vzlist -a | grep IP
+3. vzctl enter ID
+After that you can go to the /etc/hosts.allow file
+and add his local IP to the list of cpanel and whm
+4. csf -r
+
+
+=====================================================================================
+Kindly configure your emails using below settings for without SSL :
+
+
+User : Complete email address
+
+Password : Password for your email account
+
+Incoming mail server : mail.domainname
+Outgoing mail server : mail.domainname
+
+POP Port : 110
+
+IMAP port : 143
+
+SMTP Port : 25
+
+SMTP Authentication : Enabled
+
+SSL : Disabled
+
+----------------------------------------------------------------------------------------------------------------
+Kindly configure your emails using below settings for with SSL :
+
+
+
+User : Complete email address
+
+Password : Password for your email account
+
+Incoming mail server : mail.domainname
+
+Outgoing mail server : mail.domainname
+
+POP Port : 995 IMAP port : 993
+
+SMTP Port : 465
+
+SMTP Authentication : Enabled
+
+SSL : Yes
+==================================================================================
+Thank you for contacting us.
+
+As per your request, We have manually installed the SSL on given website.
+In order to get the secure green lockpad, you just need to upadte all the internal URL's from http to https.
+
+=====================================================================================
+
+https://www.milesweb.in/hosting-faqs/remote-usage-of-node-js-interpreters/
+
+=====================================================================================
+
+
+You need to submit the site to google for the issue using the url below:
+
+https://www.google.com/webmasters/tools/home?hl=en&pli=1
+
+steps-
+
+login using your gmail login details
+you will get option add your site(add site name)
+
+and follow the other steps asked there
+google will contact you through the email within 24 hours
+
+OR
+
+You need to download all your account files and folder on your local system. Scan those files and folder with updated anti-virus and remove the infected files and folder. Get your files and folder checked with your developer regarding coding and get it corrected. Once you clean your account files and folder then upload the clean data for your account. Update us once you upload the clean data for your account, so we can also check from our end.
+after cleaned the data you have to send the domain review request to google from webmaster account.
+
+=====================================================================================
+
+cPanel/WHM Allow
+ssh root@103.86.176.205 -p 22999
+vzlist -a | grep 103.86.176.137
+vzctl enter 1071
+vi /etc/hosts.allow
+
+=====================================================================================
+
+Email goes to spam link
+https://support.google.com/mail/contact/msgdelivery
+=====================================================================================
+
+Log in to WordPress.
+Select Settings from the menu and click on General.
+Locate the following entries in the General settings:: WordPress Address (URL): Site Address (URL):
+Update both URLS to include https instead of http.
+Save the changes.
+=====================================================================================
+
+
+Templates
+
+FTP connnection:
+=========
+Response: 234 AUTH TLS OK.
+Status: Initializing TLS...
+Error: Connection timed out after 20 seconds of inactivity
+Error: Could not connect to server
+#########
+
+It seems that you are using TLS while connection or by default filezilla is taking TLS
+Please go to File >> Site manager >> New site.
+Add Host and Port
+Protocol : FTP
+Encryption : Only Use Plain FTP
+Logon Type: Normal
+User: add your ftp username
+Password: FTP password
+and then click on Connect
+==================================
+Main domain change
+
+i would like to change my account to anekal.info to epani.in
+
+
+We can change your domain from the server end.
+
+Please send an email at support@milesweb.com to change main domain.
+
+Also once we changed main domain your email accounts, ftp accounts will get changes. I.e if you have test@anekal.info  then after it will get changed to test@epani.in
+Also you may need to make changes in configuration, database entries after changing main domain
+==================================
+VPS
+
+i am indeed to know about Virtual mechanism which used on your VPS
+
+We use KVM and openvz for VPS
+
+Key difference is openvz use one kernel of main node and on KVM can have its separate kernel for each VM
+
+you will have root access for both KVM and for openvz as well.
+
+with Virtual server, you always get root login details.
+
+They have their own templates, which used to deploy VPS.
+
+
+how could it related with VMs buddy :-?
+
+If your VM have Linux installed you can access it with the IP address of your VM using putty
+
+so the major use of VMs?
+
+
+It depend on the requirement of the client.
+He can use it for website hosting
+
+do your VPS support Transfer account feature?
+It would be easy for migration
+
+By default Linux (CentOS or any other OS) don't have such feature. You need to get a Cpanel/WHM for that, or plesk will work as well.
+with WHM/Cpanel, it do have transfer account feature.
+
+with Plesk need to manually restore each backup file.
+==================================
+Servers:
+We have servers located in India, US, UK and Romania.
+You can select anyone from them while placing the order.
+==================================
+Memory cache\
+Do you offer Memcache
+
+We have server on which memory cache is available.
+
+
+==================================
+Transfer hosting
+
+You may switch the hosting to us as everyday atleast 4 to 5 customers from GoDaddy are switching to MilesWeb because of the Server Reliability and the Support which we provide to the customers.
+
+No worries, let me know if you have got cPanel as control panel at Godaddy ; We will arrange the migration without any downtime.
+
+We will perform the migration of accounts without any issues. It will completely depend on the data you have on the existing hosting provider.
+
+ if you have 1 GB of data then it would take only 2 hrs to get the migration process completed.
+
+we never charge for the migration of account's its completely FREE for our customers. Other hosting providers do charge for the migration as well.
+
+Once you signup and make the payment , you need to send your existing cPanel login details to support@milesweb.com
+
+==================================
+IP block
+
+
+I have checked the website www.qmed.ngo and can confirm that it is loading fine without any problem. I have attached the screenshot with the email for confirmation of the same.
+
+Please provide us your local machine IP by accessing the link https://www.whatismyip.com/ so that we can check whether your IP address is blocked in the firewall or not.
+
+Please let me know if you need any further assistance.
+
+
+
+I have unblocked the IP and added to allow list
+
+Please make sure to use correct login details
+=================
+Server website speed
+
+Server response time is good. This is shared server so resources of the server are utilized by all users on the server. Sometime one of the user consume high resources and then response time of the server may vary.
+But we keep monitoring the server and take necessary action on the users consuming high resources of the server.
+
+If you want same server response time continuously you can go for VPS. On VPS all resources of the server will be utilized only by your website and all resources will be dedicated only for your website. You will not face such issues on VPS.
+
+==========
+
+
+Your IP 117.247.60.69 was blocked on the server due to Failed cPanel login attempts.
+
+Please check below logs
+
+csf.deny: 117.247.60.69 # lfd: (cpanel) Failed cPanel login from 117.247.60.69 (IN/India/-): 5 in the last 3600 secs - Thu Dec  1 06:07:39 2016
+
+
+I have unblocked the IP and added to allow list
+
+Please make sure to use correct login details
+==================================
+Ticket
+
+I suggest you to login into your client area >> Support >> Tickets >> New tickets.
+From here you can place new tickets to support.
+
+==================================
+what is difference between shared and managed wordpress hosting?
+
+The server resources are shared for the domains which are hosted on the shared server ( Shared Hosting Plan ).
+
+In regards to the special WordPress Plan, you will get the  ready to use platform.  You will get the separate panel ( WordPress Panel ) to manage it. It can be termed as a separate VPS for a single domain which you will use for the WordPress Hosting.
+==================================
+Affiliates
+
+I need to enroll for refferal program
+how to do that?
+
+
+https://www.milesweb.com/affiliates.php
+Join our affiliate program
+
+
+ http://affiliates.milesweb.com/signup.php
+
+will the user able to register domain name from my page?
+Should i set the pages or it will get automatically updated
+
+
+Yes, the client's can order for the domains / hosting plans etc.  You will need to signup for the Affiliate program.
+
+You will just have to place the banners or text link on your website/blog and start earning.
+
+
+==================================
+Fix quota
+
+
+http://internetlifeforum.com/virtualisation/2597-all-cpanel-accounts-unlimited-disk-quota-openvz-vps-issue-fixing/
+
+/etc/vz/conf/153.conf
+
+QUOTAUGIDLIMIT="9223372036854775807"
+
+If necessary reboot the server.
+
+quotacheck -acumgv
+
+/scripts/fixquotas
+
+
+http://www.itofy.com/other-stuff/openvz-quotacheck-cant-find-filesystem-to-check-or-filesystem-not-mounted-with-quota-option/
+
+www.itofy.com/other-stuff/openvz-quotacheck-cant-find-filesystem-to-check-or-filesystem-not-mounted-with-quota-option/
+==================================
+Account
+You have unlimited space
+You can go to WHM >> Account Functions » Create a New Account
+Scroll down and you will find account limit
+==================================
+IP block
+
+
+I have checked and can confirm that your IP address was blocked in the server firewall.
+
+I have removed the Ip address from firewall.
+
+Please check now.
+
+Below are the logs for confirmation of the same:
+Temporary Blocks: IP:117.247.60.69 Port: Dir:in TTL:3600 (Manually added: 117.247.60.69 (IN/India/-))
+==================================
+FTP
+You can change FTP account password from cPanel >> Files >> FTP accounts
+==================================
+500 error
+[Wed Dec 07 01:35:55.019102 2016] [core:alert] [pid 1362] [client 103.8.192.44:27971] /home/carmentors/public_html/.htaccess: Invalid command 'php_value', perhaps misspelled or defined by a module not included in the server configuration, referer: http://carmentors.in/
+============
+12:09
+I have removed code php_value from .htaccess and now it is working fine
+php_value used only when you are having litespeed webserver on the server
+==================================
+=================
+Server load
+
+I completely understand your concern.
+
+In order to improve the server performance we have tweaked some settings and restarted the services on the server.
+The process is still going on. Once process gets completed websites will load fine
+Your patience will be appreciated
+================
+Emails per hour
+
+
+You can send 500 emails per hour from your account. But if you send more emails and if it affect our mail server IP reputation we will need to take action
+
+see that you have got Linux Shared Plan - Unlimited Plan.
+================
+Unlimited shared + Wordpress + VPS
+
+Unlimited - qmed.ngo
+
+There is little difference in the Linux Shared Plans and WordPress Plans
+
+Wordpress Plans which you find on the Website is basically specially designed plan only for the Wordpress Hosting. Clients will have ready to use environment here in WordPress Hosting. Whereas, In cPanel Hosting, client can even have WordPress Hosting for the domains by selecting Softaculous option in the cpanel account. With the one click installer, the Wordpress can be installed within 30 seconds and client can start the hosting for the domain.
+
+A virtual private server (VPS) is a virtual machine.
+VPS runs its own copy of an operating system, and customers may have superuser-level access to that operating system instance, so they can install almost any software that runs on that OS.
+
+
+Windows hosting is shared server
+Cloud server is a network that is spread out to multiple physical host servers. In case if any single server fails, your server is automatically moved to an active host-server without losing the connection with the virtual servers. The main advantage of a clouds server is that you have the complete control over it and you can upgrade or downgrade the resources according to your preferences. In many aspects, cloud servers are similar to the physical servers; however the functions they provide are different.
+10:21
+Windows hosting enables you to host your personal or business website through a Windows platform. It provides you with the power and flexibility of managing multiple websites through the Plesk control panel.
+
+Windows hosting is shared server
+
+Speed
+
+
+The Servers has SSD disk which is really lightening fast and you will get good speed and better performance.
+
+MaNAGE
+You may go with the Managed VPS server
+https://www.milesweb.com/vps-hosting.php
+You need to select the VPS with cpanel license for it.
+================
+SSL
+
+You will have the Server Root access and can install almost every software which you wish to run on the server.
+
+The domains under your cPanel account for all of them you can install the SSL certificate.
+
+For that you will have to login to your Cpanel >> Security >> Let's Encrypt SSL >> Click on "ISSUE" infront of the website you wish to install the certificate.
+You can install the certificate using the steps provided or we can do it on your behalf.
+================
+==================================
+Cpaner user...FTP account...developer
+
+Please note that we cannot create another user for same website account.
+
+You can create a FTP account pointing to your public_html folder and then once the work is done you can delete the FTP account of change the password for the account.
+
+can you help me to create an FTP account please ?
+I don't know how to create
+
+Login to your cpanel of the website you wish to create >> FTP Accounts >> Add FTP Account
+
+==================================
+Mysql database remote\
+
+Tell your website developer to download any remote mysql database tool and provide him below details:
+Mysql hostname: 115.124.112.209
+Mysql Databasename: Database name
+Mysql username: Database username
+Mysql Password> Database password
+==================================\
+Add UDP/TCF ports on server.
+VI /etc/csf/csf.conf
+Edit
+TCP IN
+TCP OUT
+
+UDP IN
+UDP OUT addports
+Save restart CSF
+================
+Website scan
+Our server having strong security. Our server is already having firewall, mod security and other necessary security measures.
+
+It happens from time to time due to accounts being compromised, web applications being outdated or weak passwords, which in turn that get spam to be sent from the server
+
+You need to download all your account files and folder on your local system. Scan those files and folder with updated anti-virus and remove the infected files and folder. Get your files and folder checked with your developer regarding coding and get it corrected. Once you clean your account files and folder then upload the clean data for your account.
+
+Essential tips to protect your website 1) Never store credentials on your local PC or do not share with any other. 2) Constantly check your website for any web application vulnerabilities, and malware code, just in case some thing bad happens, you can prevent infecting your visitors. 3)Make a list of all third party plugins and update them regularly, only install reputable ones. 4)Use strong passwords, and make sure you scan your local PC regularly.
+
+
+Also we have noticed that you are having outdated version of Wordpress. Due to outdated version of application, plugins, themes such issues occurs. Please update all your applications, plugins and themes to the latest version.
+
+Essential tips to protect your website 1) Never store credentials on your local PC or do not share with any other. 2) Constantly check your website for any web application vulnerabilities, and malware code, just in case some thing bad happens, you can prevent infecting your visitors. 3)Make a list of all third party plugins and update them regularly, only install reputable ones. 4)Use strong passwords, and make sure you scan your local PC regularly. Please check and confirm.
+
+We suggest you to install WordPress security Plugin All In One WP Security and Wordfence Security and scan.
+
+
+Kindly check all files and folder of website by scanning with updated anti-virus and remove the infected files and folder and unwanted plugin.
+
+files and folder checked with client's developer regarding coding and get it corrected.
+Once you clean client's  files and folder then upload the clean data under your account.
+
+==================================
+Migration
+
+Hi Team.
+Below is the migration process that you have to follow.
+
+Once you migrate the accounts from one server to other. Here is what you should update customers without fail.
+
+New cPanel URL - http://ourserverIP/cpanel
+Username - cPanel-username
+Password - cPanel-password
+
+Our Name servers
+Depending on the package (Linux/Windows), update customers the Name servers.
+
+If customers are using the Name servers provided by registrar, provide them with server IP to update A record, MX record, etc.
+
+If they are using their own private Name servers (in case of reseller OR VPS), ask them to register/modify private Name servers OR help them doing the same.
+==================================
+Email settings
+
+You can configure your email setting by using SSL or Without SSL. Kindly check below setting for SSL or Without SSL.
+
+Kindly configure your emails using below settings for without SSL :
+
+User : Complete email address
+Password : Password for your email account
+Incoming mail server : mail.domainname
+Outgoing mail server : mail.domainname
+POP Port : 110
+IMAP port : 143
+SMTP Port : 25
+SMTP Authentication : Enabled
+SSL : Disabled
+
+Kindly configure your emails using below settings for with SSL :
+
+User : Complete email address
+Password : Password for your email account
+Incoming mail server : mail.domainname
+Outgoing mail server : mail.domainname
+POP Port : 995
+IMAP port : 993
+SMTP Port : 465
+SMTP Authentication : Enabled
+SSL : Yes
+
+You can refer below steps Email accounts for Samsung Galaxy J7 :
+
+Add
+
+From any Home screen, tap Apps.
+Tap Settings.
+Tap Accounts.
+Tap +Add account.
+Select the account type you wish to setup.
+Enter your email address and password.
+Edit incoming email configuration settings, as necessary.
+Tap Next.
+Edit outgoing email configuration settings, as necessary.
+Tap Next .
+Read the Google disclaimer and tap OK to accept.
+Set the email check frequency, retrieval size, and notification options, as desired.
+Tap Next .
+Enter an account name (optional).
+Tap Done.
+==========
+for iphone
+
+1. Select Settings from the home screen of your iPhone:
+2. Choose Mail, Contacts, Calendars and click Add Account:
+3. Choose Other from the list that appears:
+
+4. Select Add Mail Account. In the New Account menu, you will need to specify the following records:
+
+Name  your name (will appear as sender name)
+Address  your full email address
+Password  the password for this email address
+Description  lets you specify any description (we suggest you use your email address)
+
+Click Next.
+
+5. Select protocol type: IMAP or POP3.
+
+6. Settings are the same for both IMAP and POP3:
+
+Name, Address and Description: should have been already filled in
+Host name: mail.domainname
+User Name: your email address
+Password: password for your email
+
+In the fields for both Incoming Mail Server and Outgoing Mail Server, indicate the following settings:
+Incoming mail server : mail.domainname
+Outgoing mail server : mail.domainname
+
+7. After you enter the above information, tap Save at the top.
+==============
+
+Hello,
+
+Thank you for the email.
+
+If you are using Iphone then use the below settings and then try to send emails:
+
+
+1. Go to Settings -> Mail, Contacts, Calendar and tap on your email account.
+
+2. Tap on "Account," then go down to the "Outgoing Mail Server" section and tap on "SMTP."
+
+3. Tap on your Primary Server.
+
+4. Even though it says "Optional," fill out both user name and password under Outgoing Mail Server.
+
+5. Tap "Done" in the top right to save your changes.
+
+7. After you enter the above information, tap Save at the top.
+
+Make sure you "turn OFF the Use SSL".
+==================
+
+If you are using android then use below settings and recheck again:
+
+1. Open Settings of your Android device and tap on Accounts menu in section Personal:
+2. Then tap on Add Account at the very bottom of the screen:
+3. On the next screen you will need to choose whether you wish to configure IMAP or POP3 account.
+Simply choose the desired option by tapping Personal (IMAP) or Personal (POP3) correspondingly:
+4. The next screen will prompt you to enter your email address.  Make sure to type in *full* email address:
+
+5. Once done, tap Next to proceed to the next step.
+
+Here you will need to indicate your email account password.
+
+
+6. Use following settings for POP3:
+
+Username: full email address
+Password: password for this mailbox
+Server: server your account is hosted on
+POP3 Port: 110
+Security Type: No
+
+Once done, tap Next to verify the settings and proceed to Outgoing Server settings menu.
+
+8. Here you will need to fill in the corresponding fields as shown below:
+
+SMTP Server: same as incoming server
+Port: 25
+Security Type: SSL/TLS (Accept All certificates)
+Username: full email address
+Password: password for this mailbox
+9. Once ready, tap Next to verify SMTP settings and finish the account setup:
+
+
+Please let me know if you need any further assistance.
+
+Kind Regards,
+Taposh Biswas
+Technical Support Engineer
+MilesWeb Internet Services Pvt Ltd
+24/7/365 Support: Live Chat | Phone | Email
+
+Follow us on
+https://twitter.com/milesweb
+https://plus.google.com/+Milesweb/
+https://www.facebook.com/MilesWeb
+==================================
+
+Notification for resource usage
+
+Hello Mohamed,
+
+We have noticed that your account is consuming high resources on the server due to that server performance is getting affected.
+Please check attached image of high CPU usage of your account. This is the last 1 hours usage.
+
+Please check it and take necessary action. Optimize your websites, databases, scripts with the help of your developer so that it will consume less resources.
+
+Logs :
+
+==============================================
+
+892546 xysxgafz 20 0 310m 80m 3868 R 65.0 0.1 0:27.53 lsphp:/home/xysxgafz/public_html/index.php
+893160 xysxgafz 20 0 328m 97m 3796 R 44.6 0.2 0:15.08 lsphp:/home/xysxgafz/public_html/index.php
+892764 xysxgafz 20 0 317m 86m 3868 R 39.7 0.1 0:25.63 lsphp:/home/xysxgafz/public_html/index.php
+893152 xysxgafz 20 0 329m 97m 3796 R 22.2 0.2 0:15.91 lsphp:/home/xysxgafz/public_html/index.php
+893148 xysxgafz 20 0 328m 97m 3796 R 22.0 0.2 0:14.60 lsphp:/home/xysxgafz/public_html/index.php
+892551 xysxgafz 20 0 321m 90m 3868 S 21.7 0.1 0:33.77 lsphp:/home/xysxgafz/public_html/index.php
+893146 xysxgafz 20 0 326m 96m 3884 R 21.7 0.2 0:15.83 lsphp:/home/xysxgafz/public_html/index.php
+890456 xysxgafz 20 0 240m 13m 7908 S 0.0 0.0 0:01.76 lsphp
+
+==============================================
+
+Also you can view the resource usage from cPanel >> Metrics >> CPU and concurrent connection usage.
+Please refer attached screenshot.
+
+Please take necessary action on it oe else we will disbale the script which is causing server load.
+
+Please let me know if you need any further assistance.
+==================================
+Maldet reprt
+
+Hello Ashish,
+
+We have noticed that your account is consuming high resources on the server due to that server performance is getting affected. We have found some infected and suspicious files so we have scanned and removed the infected files from the server.
+
+I suggest you to download all your account files and folder on your local system. Scan those files and folder with updated anti-virus and remove the infected files and folder. Get your files and folder checked with your developer regarding coding and get it corrected. Once you clean your account files and folder then upload the clean data for your account.
+
+Essential tips to protect your website 1) Never store credentials on your local PC or do not share with any other. 2) Constantly check your website for any web application vulnerabilities, and malware code, just in case some thing bad happens, you can prevent infecting your visitors. 3)Make a list of all third party plugins and update them regularly, only install reputable ones. 4)Use strong passwords, and make sure you scan your local PC regularly.
+
+Below are the logs for confirmation of the same.
+
+HOST: fortune.solidhosting.pro
+SCAN ID: 161220-1314.914274
+STARTED: Dec 20 2016 13:14:10 +0530
+COMPLETED: Dec 20 2016 13:52:24 +0530
+ELAPSED: 2294s [find: 27s]
+
+PATH: /home/evermore/public_html
+TOTAL FILES: 95667
+TOTAL HITS: 6
+TOTAL CLEANED: 3
+
+FILE HIT LIST:
+{HEX}base64.inject.unclassed.7 : /home/evermore/public_html/skin/frontend/Mage.php => /usr/local/maldetect/quarantine/Mage.php.1224214509
+{HEX}php.nested.bf404.540 : /home/evermore/public_html/libcsox5.php => /usr/local/maldetect/quarantine/libcsox5.php.3099418994
+{HEX}gzbase64.inject.unclassed.15 : /home/evermore/public_html/var/5833edcc06e55Module.tar => /usr/local/maldetect/quarantine/5833edcc06e55Module.tar.1372924992
+{HEX}gzbase64.inject.unclassed.15 : /home/evermore/public_html/var/5833f3532dae6Module.tar => /usr/local/maldetect/quarantine/5833f3532dae6Module.tar.2424326427
+{HEX}php.nested.bf404.540 : /home/evermore/public_html/er.zip => /usr/local/maldetect/quarantine/er.zip.28508892
+
+{CAV}Php.Malware.Agent-1426825 : /home/evermore/public_html/updater.php => /usr/local/maldetect/quarantine/updater.php.36922053
+
+Please let me know if you need any further assistance.
+===================
+Plesk database backup manual
+
+You can manually backup  the database by login into the account for the website >> Database >> Export Dump. This will take the backup on your local machine.
+
+================
+Load
+Please note that on shared server sometimes there is issue with load as there are multiple users on the server and sometimes some of the users take resources which causes the load. We closely monitor the server and take action on such users.
+==========
+SSL
+
+ We can install the godaddy SSL certificate on your domain for that you will need to provide the CSR details to generate the CSR. We can install the SSL certificate on server but as you want to use cloudflare the SSL which we install on the server may get override because cloudflare has its own certificate. You may need to find options on cloudflare to use SSL Install on the server.
+
+Please send below details so we can generate CSR and issue SSL certificate.
+
+Domain:
+City:
+State:
+Country:
+Company Name:
+Company Division:
+Email:
+==============
+Set up email in gmail
+
+
+Please use below steps to configure your email account in gmail:
+
+=============================
+
+Login into email account->>go to settings->>Add a POP3 mail account you own
+1.Fill with email ID -->next step
+2.Please fill up username as email ID and password.
+check all the box but uncheck the box -Always use a secure connection (SSL) when retrieving mail.
+3.Use smtp - mail.domainname.com port no 587 or 25.
+4.It will ask verification code it will be sent to your email ID whichever you want to configure.
+
+=============================
+FTP
+
+Go to file >> site manager
+create new site
+21:12
+enter host as intelecause.com
+change encryption to Only use plane FTP
+and login type as ask for password
+enter your cpanel username below that
+click on connect
+it will ask for password
+21:13
+enter your password and you should see your files
+==========
+Sitemush
+
+Go to All pages on the Dashboard >> Products >> Click on edit (pencil icon) >> You will redirect to edit page >> Edit page (Products) >> double click on products and enter the name wish to add i.e History.
+==========
+CDN
+
+We provide CDN for the clients domains.
+A content delivery network (CDN) is a system of distributed servers (network) that deliver webpages and other Web content to a user based on the geographic locations of the user, the origin of the webpage and a content delivery server
+====
+
+You need to create an account for the website first and for that you need to login into WHM >> Create an account. Here you can create the cPanel account for the website. Once you create the account, you can login to
+==================== cPanel for the website either from WHM >> List account >> CLick on Cpanel icon or using the link  http://server.maplekart.com:2082/
+====================
+
+File upload enable steps
+
+Got /usr/local/apache/conf/httpd.conf search the website and add below code
+
+<IfModule mod_php4.c>
+      php_admin_value file_uploads 1
+    </IfModule>
+    <IfModule mod_php5.c>
+      php_admin_value file_uploads 1
+    </IfModule>
+
+then go to below link
+
+/etc/apache2/conf.d/userdata/std/2_4/wtllpco/wtllp.co.in
+Create upload.conf file if not present add above code again
+====================
+Go to Horde >> Click on gear icon >> Preferences >> Personal Information
+Under Personal information you will find option "Your full name:"
+Add the name in text box and click on save
+=================
+Linux difference windows
+
+Linux and Windows are two different types of operating systems. Linux is more secure and more efficient than Windows. Linux also has more of the features web designers expect, so unless you have websites which need specific Windows applications, Linux is the preferred choice.
+
+Windows applications which require a Windows server:
+ASP.NET
+MSSQL
+MS Access
+Visual Basic development
+Remote Desktop (dedicated servers only)
+
+One other difference is that Linux files are case-sensitive and Windows files are not.
+Example:
+On a Linux server, home.html and Home.html are different names.
+On a Windows server, home.html, Home.html, and HOME.HTML are the same name.
+=============
+# enable PHP error logging
+php_flag  log_errors on
+php_value error_log  /home/path/public_html/domain/PHP_errors.log
+=============
+Hello,
+
+Thank you for your patience.
+
+We have migrated the website to your VPS server. Kindly use the URL below to access cPanel for the account.
+
+cPanel URL - https://server.cleanmail.co.in:2083/
+
+Login details to cPanel are same as before.
+
+For website to work from our server, kindly update Name servers below.
+
+ns1.cleanmail.co.in
+ns2.cleanmail.co.in
+========================
+
+Thank you for your patience.
+
+We would like to inform you that migration has been completed for the domain. All data has been migrated to our server from old host.
+
+Also, you will need to register the private nameservers at your domain registrar end so that your domain will work on your VPS server or else you provide us the domain registrar control panel details, so we will register the nameservers for your domain.
+
+Below are the private nameservers :
+
+ns1. >> 103.212.120.
+ns2. >> 103.212.120.
+
+You can access the WHM by using below URL :
+
+http://103.212.120.134:2086/
+
+Below are the whm login details :
+
+Username :
+Password :
+
+Below are the Cpanel login details :
+
+http://103.212.120.134:2082/
+Username :
+Password :
+
+
+The new server IP is 69.39.237.228. If you are not using our name servers, you will have to point the domain to the new server IP. If you are using our nameservers the domains will point to our new server automatically. Once you update DNS it will take 6 to 12 hours to propagate the domain globally.
+
+Please check data integrity(files/folders, databases, emails,etc) and confirm if all data has been migrated successfully.
+==============================
+
+SSL webmail
+
+Service SSL is installed on hostname of the server i.e fortune.solidhosting.pro. On mail.slashash.co domain SSL is installed.
+Both are different.
+
+If you use mail.slashash.co it shows SSL warning and if you ignore and accept the certificate in outlook while configuration of the email it will work properly. When you use mail.slashash.co as mail server it tries to consider as service SSL and shows mismatch error because domain SSL is installed on mail.slashash.co. If you want to use secure email settings then you will have to use our server hostname.
+
+As you mentioned that mail.slashash.co was working so may be you accepted the certificate after it shows warning.
+But now you will have to use fortune.solidhosting.pro for secure email settings. For non ssl email settings you can use mail.slashash.co.
+==================================
+gzip enable on apache
+
+https://tecadmin.net/enable-apache-gzip-compression-globally-in-whm-cpanel/
+gzip enable on nginx
+
+vi /usr/local/apps/nginx/etc/nginx.conf
+remnove comment in front of gzip on
+====================================
+Login to KVM
+
+virsh list
+
+If not running
+
+Virsh create /home/kvm/kvm290/kvm290.xml
+
+KVM offline to online
+=====================
+Add RDNS
+use command on shell
+
+[root@server ~]# host 103.86.176.185
+Host 185.176.86.103.in-addr.arpa. not found: 3(NXDOMAIN)
+
+Use the entry 176.86.103.in-addr.arpa on any whm of any server and go to edit DNS zone
+Add initial of the IP like 185 in above case >> PTR >> Hostname (server.dezains.com.) need . at the end save
+==========
+http to https
+
+As mentioned in the previous reply, you need to change the internal links for the website from http to https with the help of the website developer. You can check the links by browsing the website in Mozilla browser >> Press F12 >> Network >> ALL >> Press F5
+
+You will get the link information which needs to be updated from http and https and this has to be done with the help of the developer. Unfortunately, we do not provide website development so we do not have any ref doc or steps.
+===========
+503 Valid RCPT command must precede DATA
+
+Follow the steps below:
+1) Open outlook
+2) Go to Tools/Email Accounts
+3) Select the Account and click Change
+4) Click on More Settings
+5) Click on Outgoing Server Tab
+6) Click "Outgoing Mail Server (SMTP) requires authentication" and make sure "Use same settings as incoming mail server" is selected.
+
+===========
+Now try sending an email in Outlook using the domain account.
+==========
+https://www.milesweb.com/forums/errors-and-solutions/codeigniter-session-configured-save-path-''-is-not-a-directory-doesn't-exist/msg1885/#msg1885
+==========
+you need to use below details to access your account via SSH
+Hostname: 103.86.176.30
+Username: Cpanel username
+Password: Cpanel password
+Port: 22999
+==========
+
+Knowledge Base
+Home » Knowledge Base » Security » SSL » Here
+How to enable HTTP Strict Transport Security (HSTS) for your site
+https://www.a2hosting.in/kb/security/ssl/enabling-http-strict-transport-security-hsts-for-your-site
+=============
+https://www.milesweb.com/admin/supporttickets.php?action=view&id=165853
+Owncloud
+==============
+Zimbra mail quota
+
+I have checked your account and can see that you have 65 accounts for vertebrand.com. You can check the mail size for accounts by login into Zimbra admin >> Accounts >> Right click on account and click on Edit >> Here you can check "Quota" for the email.
+================
+Open the FileZilla >> Clcik on file >> Site manager >> New site >> Host: Your IP address  >> Port:21 >> Protocol: FTP >> Encryption: use plain FTP or Require explicit FTP over TLS >> Login type: Normal >> Place username and password and connect
+==================
+
+
+2017-06-13 19:29:20 1dKi8M-0004HJ-NA => jason@upfrontprojects.com.au R=dkim_lookuphost T=dkim_remote_smtp H=mx.upfrontprojects.com.au [65.254.254.53] X=TLSv1:DHE-RSA-AES256-SHA:256 CV=no C="250 Y9VF1v00Q12LjuF019VJAn mail accepted for delivery"
+2017-06-14 20:46:02 H=nsstlmta02p.bpe.bigpond.com [203.38.21.2]:51085 sender verify fail for <jason@upfrontprojects.com.au>: mx.upfrontprojects.com.au [65.254.254.50] : response to "MAIL FROM:<> SIZE=9239" was: 550 <> Sender rejected.
+2017-06-14 20:46:02 H=nsstlmta02p.bpe.bigpond.com [203.38.21.2]:51085 X=TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256 CV=no F=<jason@upfrontprojects.com.au> rejected RCPT <wee@allstyledsteel.com.au>: Sender verify failed
+2017-06-14 20:47:02 H=nsstlmta02p.bpe.bigpond.com [203.38.21.2]:55951 sender verify fail for <jason@upfrontprojects.com.au>
+2017-06-14 20:47:02 H=nsstlmta02p.bpe.bigpond.com [203.38.21.2]:55951 X=TLSv1.2:ECDHE-RSA-AES256-GCM-SH
+
+Use callouts to verify the existence of email senders. Exim will connect to the mail exchanger for a given address to verify it exists before accepting mail from it.
+WHM >> Exim Configuration Manager >> Basic Editor >> Sender Verification Callouts >> Off
+=========================
+Task 'sagar.tarawade@sbtresearch.com  - Receiving' reported error (0x80042108) : 'Outlook cannot connect to your incoming (POP3) e-mail server. If you continue to receive this message, contact your server administrator or Internet service provider (ISP).'
+
+http://www.fixerrs.com/2016/11/outlook-error-0x80042108.html
+=========================
+
+The hacking was done from IP address 173.255.233.43 and it hacked the websites which were having old version of themes and plugins and wordpress. We have taken strict action on the IP address.
+
+For security, I suggest you to update your wordpress, theme and plugins and change the cPanel and ftp password
+=======================
+Hello Ashvarya,
+
+Please send below details at support@milesweb.com so we can generate CSR and issue SSL certificate and install it for your domain
+
+==========================
+
+Domain:
+City:
+State:
+Country:
+Company Name:
+Company Division:
+Email:
+
+====================
+FTP Connection
+You can increase the number of connections FileZilla user.
+
+1) Start FileZilla
+
+2) Click File
+
+
+3) Click Site Manager
+
+
+4) Select your FTP Site from the left-hand menu
+
+5) Click the Transfer Settings tab
+
+6) Check the box for Limit number of simultaneous connections and select the number of connections you wish to limit FileZilla too.
+
+====================
+
+Go to link http://destiny.milesweb.com:5353 and Select server and click on manage.
+
+Go through serial console and create session and use Jave console otherwise open "ssh console-username@103.27.235.66 -p 22999" in terminal and use password in given in session.
+
+The login details are in the welcome email sent to your registered email address
+=============
+In order to access VNC via destiny's portal your browser need to have Java support installed.
+Currently Internet explorer have Java support Or older versions of Mozilla firefox. Latest version of mozilla firefox doesn't support Java. So you may need to check different browsers to access VNC.
+
+Also you have direct Shell access of the server so you can access server via Putty directly.
+====
+=========
+You can refer the link for steps for cloning your website for staging.
+http://www.softaculous.com/docs/Clone
+
+[root@fortune public_html]# grep -irl "Design by SitePad" *
+[root@fortune public_html]# grep -irl "Design by" *
+kannurcity/home.html
+kannurcity/blog.html
+kannurcity/contact.html
+kannurcity/blog/default-post.html
+kannurcity/blog/page/1.html
+kannurcity/index.html
+[root@fortune public_html]# vi kannurcity/home.html
+------------------
+
+You can login into WHM >> Account information >> List account >> Click on cpanel icon and you will login into the cPanel of the website
+once login into cPanel >> File manager and download the files you want
+
+You need to change the password for the cPanel account by login into WHM >> >> Account information >> List account >> Click on + sign >> Change password
+==========
+Both port 25 and 26 are open on the server, Issue was from your internet provider, they block port 25 some time to control traffic for emails on their servers. Port 26 don't get block most of the time as its not a common port to send emails, do update us if you face such problem in future, we will check for it or contact us on live chat so that we will quickly fix your issue.
+==============
+
+We have found below processes running from your account.
+
+233536 sbrsguru 20 0 486m 119m 2404 S 99.9 0.4 494:24.01 /home/sbrsgurukul/public_html/wp-content/uploads/2015/05/hBuK -a cryptonight -o strat
+
+We have removed those files and killed the processes. It appears that your websites or plugins or themes are compromised.
+Please go through each domain/subdomain and upgrade applications, plugin, themes to the latest version. Scan all files/folders with anti-virus by downloading to your computer. Remove all unwanted installations, folders/files/plugin/themes from the account. Use security plugins like Wordfence for WP websites.
+=============
+mylittleadmin
+
+Kindly follow below process for login
+> Click on Mylittele admin >> click on connection >> Click on Disconnect >>
+> now fill all the details >> clcik on connect >> now go to tools >>
+click on New Query
+==========
+I have checked your account and can see that the website is not working because of one of your plugin is causing the issue. I have renamed the plugin folder or the website and the website is working. You can login to your wp-admin and check the plugins by enabling once plugin at a time and if you get error for particular plugin disable it.
+-========
+Clone
+
+Below are the steps for cloning your site.
+
+Step 1: Log into your cPanel
+Step 2: Locate and click on the Softaculous tool icon located under the Software/Services category.
+Step 3: Click on All Installations Once in the Softaculous tool, select the All Installations icon located in the upper right corner.
+Step 4: This will list all the different program instances currently installed in your Softaculous. Locate the one you want to clone and click on the Clone icon.
+Step 5: Once clicked, you will be brought to the Clone Installation page. From here you will need to fill out the details of where you want your clone to go.
+
+Choose Protocol: Unless you have specific reasons to use http://www or the https://, stick with the default http://
+Choose Domain: If you are transferring to a subdomain or another main domain, select it here.
+In Directory: If you are moving to a subfolder, enter that here. If not, delete anything here and make it blank.
+Database Name: You can either name your database or leave it at the default.
+
+
+Step 6: Once you have entered all the destination information for your clone, click on the Clone Installation button.
+Step 7: After clicking on the button, Softaculous will install the clone to the new folder/domain/subdomain you selected. It also clones the database as well so that each copy has its own. (Be sure that you have enough room on your hosting plan for the databases or your clone will fail).
+==================
+
+
+
+You need to use this script for send emails .
+
+
+<?php
+ini_set("include_path", '/home/seamanshippingse/php:' . ini_get("include_path"));
+require_once "Mail.php";
+
+$from = "Sandra Sender <info@seamanshippingservices.com>";
+$to = "Ramona Recipient <test.milesweb@gmail.com>";
+$subject = "Hi!";
+$body = "Hi,\n\nHow are you?";
+
+$host = "inr05.solidhosting.pro";
+$port = "25";
+$username = "info@seamanshippingservices.com";
+$password = "]y#o~~=7bu+~";
+
+$headers = array ('From' => $from,
+  'To' => $to,
+  'Subject' => $subject);
+$smtp = Mail::factory('smtp',
+  array ('host' => $host,
+    'port' => $port,
+    'auth' => true,
+    'username' => $username,
+    'password' => $password));
+
+$mail = $smtp->send($to, $headers, $body);
+
+if (PEAR::isError($mail)) {
+  echo("<p>" . $mail->getMessage() . "</p>");
+ } else {
+  echo("<p>Message successfully sent!</p>");
+ }
+?>
+
+For User and password use your domain email address .
+
+And for host use mail.domainname
+
+Means mail.trainingfreelance.com
+
+You need to use same domains email address and passwords .
+==============
+Dear Murali,
+
+Kindly confirm where you see your other domains was not loading as I see server uptime is 41 days and we have not received any other issue on this server regarding services not loading properly. Also if possible update us on live chat or call on our support number the moment you see your site is not loading for you so that it will help us to investigate and fix such issue for you.
+=========
+I am glad to inform you, that the issue has been fixed. The cause of the issue was misconfiguration of POP service, which was listening on IPv6 IP address only. I have set Only bind to these selected IP addresses option and set all the IPs in MailEnable> POP - Properties. Then restarted the service in the Services > MailEnable POP Service > restart. After it went to Outlook > File > Add Account > Filled in all required fields and connected automatically.
+======
+I have checked the bounce back message you have provided and can see that outlook is blocking the emails sent from the dedicated IP. Please note that outlook blocks emails if bulk email is sent from particular IP. I have sent a delist request and once the IP gets delisted your emails will work.
+===========
+We have experienced a lot of spam and other unsolicited mail being sent from the shared and reseller servers. This has affected number of clients hosted on these servers. For the benefit of majority of our customers, the management has disabled PHP mail function on these servers.
+
+We have posted a more in-depth article in our knowledgebase on sending e-mails using SMTP authentication.
+
+https://www.milesweb.com/hosting-faqs/send-email-php-script-using-smtp-authentication/
+
+https://www.milesweb.com/hosting-faqs/using-smtp-authentication-send-email-wordpress/
+
+https://www.milesweb.com/hosting-faqs/set-outgoing-smtp-email-magento/
+
+We do not offer support on scripting related issues as it falls out of the scope of web hosting technical support. But still we will try our best to help you with fixing the PHP mail related issues.
+==========
+Each webmail client has a timezone setting, which is set to the server clock by default.
+
+SquirrelMail
+
+Go inside the webmail program and click Options at the top.
+Click the first link called Personal Information.
+Under Timezone Options, look for "Your current timezone:"
+Change the drop down to your time zone.
+Click the Submit button.
+Horde
+
+Go inside the webmail program and click Options at the top.
+Click the second link called Locale and Time.
+Look for "Your current time zone:"
+Change the drop down to your time zone.
+Click the Save Options button.
+RoundCube
+
+Go inside the webmail program and click Personal Settings at the top right.
+Under User Interface, look for "Time zone"
+Change the drop down to your time zone.
+Click the Save button.
+=======
+phpmyadmin
+
+Login to cPanel
+Scroll down to the databases section and then click on phpMyAdmin
+
+
+Select database to export Click on the database you are working with in the left menu
+
+Click Export in the tabs along the top of the screen.
+
+Export method The export option that we are providing instructions for is the Quick method. Click on the radial button for Quick. If you want more complete control, then click on Custom. You will need to be familiar with the exporting MySQL databases in order to use these options. If you are not, then please consult with an experienced database administrator or developer.
+
+Select the file format Next, you will need to click on the format of the export file. By default, it should be on SQL, so you don't need to change anything.
+
+Click on go Click on the Go button in order to perform the export.
+
+You will be prompted to either open or save the file. Please select the option to save the file and then save the somewhere you'll remember (such as directly on your desktop).
+=======
+If you want to enable detail error for any website,you need do it from IIS manager
+
+5:18 pm
+From respective website>> Error pages >> Edit feature setting>> Select Detailed error>> apply
+
+For An error occurred on the server when processing the URL. Please contact the system administrator. <p/> If you are the system administrator please click <a href="http://go.microsoft.com/fwlink/?LinkID=82731">here</a> to find out more about this error.
+======
+Hello ,
+
+WHMCS has been successfully installed at :
+
+http://panel.macroweb.me/panel
+
+Administrative URL : http://panel.macroweb.me/panel/admin
+
+Username: admin
+Password: admin@123
+==
+
+Please note that you are on shared server and when any client's website consumes high resource on the server it creates load on the server and cause website to load slow. We take action on such clients and suspend the account. Currently there is no load on the server and website is working without any delay.
+==========
+Hello,
+
+Thank you for the email.
+
+I have checked the IP 103.86.176.194 and can see it is not blacklisted and its IP reputation is neutral. You can check the below link for confirmation.
+
+https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a103.86.176.194&run=toolpage
+https://www.talosintelligence.com/reputation_center/lookup?search=103.86.176.194
+
+I have sent a test mail to our test gmail and Milesweb email account and can see it is going into inbox for Milesweb account and in spam folder for gmail. Please check the below link.
+
+http://prntscr.com/iqquiw
+
+It seems that gmail is blocking emails from the IP and I have placed a delist request and once the IP gets delisted your emails will go into Inbox for gmail.
+===========================
+I have checked the IP 103.212.120.62 and can see it is not blacklisted and its IP reputation is neutral. You can check the below link for confirmation.
+
+https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a103.212.120.62&run=toolpage
+https://www.talosintelligence.com/reputation_center/lookup?search=103.212.120.62
+
+It seems that outlook is blocking emails from the IP and I have placed a delist request and once the IP gets delisted your emails will work.
+
+===========================
+Login to dashboard of the website >> install Plugin >> wp-mail-smtp
+
+After installation, activate the plugin and go to settings
+
+Fill info as below
+
+From Email >> info@veritymall.com (email address)
+
+Mailer >> other smtp
+
+SMTP Host >> mail.domainname
+
+SMTP Port >> 25
+
+Encryption >> none
+
+Authentication >> On
+
+SMTP Username >> info@veritymall.com
+
+SMTP Password >> password for email address
+
+save settings
+
+Click on Email Test for testing email
+=========
+Outlook email download
+Kindly confirm me for the same email address "manjunath.g@navachetanagroup.com" you have configured email clients application (Thunderbird, Outlook) with pop3. If you already configured then Email is all downloaded to your Email application if you did not enable the option in application "Leave a copy of email".
+========
+If you wish to use your private nameservers then you will have to register it from domain registrar end.
+
+Please point the A record of the nameservers to below IP address at the time of nameservers registration.
+ns1.orangeraven.cz >> 103.27.232.40
+ns2.orangeraven.cz >> 109.163.228.39
+
+Once you complete with registration, add ns1 and ns2 record from the edit dns zone of the domain orangeraven.cz like as below
+ns1 >> 103.27.232.40
+ns2 >> 109.163.228.39
+
+If you face the same issue please update us the domain registrar panel of majortalashi.com so that we can do it from our end for you.
+======
+Hello Girish,
+
+Hope you are doing well!
+
+We have checked your issue, It is caused Because of your disk space is almost full for the reseller account.
+Here are the details.
+
+you have 100 GB disk space with us for this account, But you have assigned unlimited disk space for some of your client's account. that's why you are facing a disk space full issue. and which is the root cause of this issue.
+
+Please let us know if you want to change the disk space of particular accounts and how much space you want to allocate them.
+==========
+
+Hello,
+
+Thank you for the email.
+
+You can import the sql file using below steps.
+
+Login to cPanel.
+Go to phpMyAdmin.
+Click to create new database name in the top left, or choose an existing database.
+Click Import in the main area of phpMyAdmin.
+Browse for the .sql file on your computer and click Open.
+Click Go to proceed.
+You should get a message saying the import has been successful.
+
+Make sure the sql file should not be more that 50 mb.
+==========
+
+Hello,
+
+Thank you for the email.
+
+We have already updated you in the ticket #850438 regarding the issue. Please do not open multiple tickets regarding same issue. I am closing this ticket now.
+===========
+Hello Girish,
+
+Thank you for your patience.
+
+We have checked the issue with arissteel.com.au and it seems that website is not compatible with old version of Safari.
+We have accessed website on Safari 9.1, 11 and it is working fine. But on Safari 5.1 or 5.7 it is not working.
+
+So this is not server issue. This is browser compatibility issue. You need to contact developer and ask to make website compatible to all versions of Safari or use latest version to browse website.
+==========
+Hello,
+
+Thank you for the email.
+
+Please note that you are on shared server and when any client's website sends bulk email or spamming is done on the server the IP gets blacklisted and all clients are affected. We take action on such clients and suspend the account.
+
+If you want you can purchase dedicated IP and we will assign the IP to your account and the emails for your accounts will go from the dedicated IP and if shared IP gets blacklisted you wont face such issue. But please note that if your account sends bulk email or spamming is done your dedicated IP gets blacklisted and you will be responsible for that. Please confirm how you wish to proceed.
+======
+It happens if your, web applications being outdated or weak passwords, or the password is leaked.
+
+Essential tips to protect your website 1) Never store credentials on your local PC or do not share with any other. 2) Use strong passwords, and make sure you scan your local PC regularly.
+======
+Hello,
+
+Thank you for the email.
+
+You have registered the nameservers as below:
+
+ns1.gccsolution.com >> 162.144.180.20
+ns2.gccsolution.com >> 162.144.180.20
+
+The IP you have used is not our servers IP. If you want to register the private nameservers using website gccsolution.com then you will have to use below details:
+
+ns1.domainname >> 103.27.232.40
+ns2.domainname >> 109.163.228.39
+ns3.domainname >> 159.89.159.224
+ns4.domainname >> 167.99.71.43
+
+You need to register the above nameservers to register end of the website gccsolution.com. Once you register the nameservers, you need to add the A record for the nameservers in "Edit dns zone" option of gccsolution.com from our cPanel as below:
+
+ns1 >> 103.27.232.40
+ns2 >> 109.163.228.39
+ns3 >> 159.89.71.43
+ns4 >> 167.99.71.43
+
+Once you add the nameserver in the dns zone it will get completely registered.
+
+If you face any issue, then provide us registrar panel details of the website and we will register it for you.
+
+
+
+
+If you want to register the private nameservers you can register using any website of your account. You will have to use below details in the registrar panel of the domain. (Make sure you replace domainname with actual domain name):
+
+ns1.domainname >> 103.27.232.40
+ns2.domainname >> 109.163.228.39
+ns3.domainname >> 159.89.159.224
+ns4.domainname >> 167.99.71.43
+
+Once you register the nameservers, you need to add the A record for the nameservers in "Edit dns zone" option of the website from our cPanel as below:
+
+ns1 >> 103.27.232.40
+ns2 >> 109.163.228.39
+ns3 >> 159.89.71.43
+ns4 >> 167.99.71.43
+
+Once you add the nameserver in the dns zone it will get completely registered.
+===================
+
+Hello,
+
+Thank you for the email.
+
+We have checked the server IP and can confirm it is blacklisted. We have already placed delist request for the server IP. Once the IP gets delisted, you should not face the issue with the emails.
+===============
+Hello,
+
+I have checked the bounce back email forwarded to us, it seems like few of the yahoo users have marked this email as spam if there are users in your mailing list who don't want your email kindly remove them from your mailing list so that you will not face such issue in future, as per the guide lien by yahoo on URL : https://help.yahoo.com/kb/postmaster/SLN3434.html?guccounter=1 they suggested to try sending emails after 4 hours.
+
+There is also a possibility that you might have hit the limit of emails received per hour by yahoo servers I will suggest you to try sending emails in small batches so that you will not hit the limit set by yahoo and such error will not occur in future.
+========
+Hi Analina,
+
+Thank you for your patience.
+
+Further investigating, I see that the below code works. However, it works when I renamed the .htaccess file under sub directory accolade. This .htacess file conflicts with the redirects we set. I would request you to check the .htaccess files under sub directory accolade so that they do not conflict with the redirect rules.
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^aachih.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.aachih.com$
+RewriteRule ^accolade\/email\/preview\/32$ "http:\/\/aachih.com\/accolade\/email\/preview\/39" [R=301,L]
+==================
+We have checked the video you have provided and can see that you are getting logged our from cPanel and getting error related with IP change. Please note that this happens because of dynamic IP which is provided by your ISP provider which if changes you gets logged out from cPanel. Please note that if you have stable internet connection but the dynamic IP getting changed frequently then you will face the issue.
+
+Please note that this is not issue with server. You will have to contact your ISP provider and ask them to provide static IP for your network so that you wont face such issues.
+===============
+Hello,
+
+We have received an alert for the malicious activity under your account. When checked on the server we have found multiple infected files. We have suspended this account for now, I will suggest you to download full backup of this account from your main reseller account directory path /home/factumt1/public_html file name : cpmove-fwamultinational.tar.gz and clean its file and reupload them after removing the account first from the server. I see its a wordpress website I will suggest you to install a security plugin like wordfence or sucuri and scan regularly also keep your wordpress updated all the time along with its themes and plugins. Do not install or use any theme or plugin from unknown provider or which are not being updated from last 6 - 12 months. You can also consider our WAF after uploading clean files : https://www.milesweb.com/web-security/web-application-firewall to prevent from such attacks in futures.
+=================
+Our hosting plans are crafted to host websites with optimum performance and not for storage. The web space cannot be used to store/maintain backups. If you want to backup your website; simply download the data via FTP OR download the databases from phpMyadmin.
+Our hosting plans are crafted to host websites with optimum performance and not for storage. The web space cannot be used to store/maintain backups. If you want to backup your website; simply download the data via FTP OR download the databases from phpMyadmin.
+===========
+Browse to your phpMyAdmin URL using your Internet Web Browser, and login using your root or dba user login as shown.
+
+From the main menu choose Databases
+
+
+In the create database field type in a name for your database. Leave the collation drop down box if you wish to use the default MySQL schema collation. Click Create.
+
+
+Your database will now be visible on the right hand side under the list of available databases. To setup a new user login to access this database, click on Users in the main menu. Choose the Add User option under the list of available server users.
+
+
+In the section titledLogin Information - type in a username, localhost and a password in the fields as shown. Optionally you can press the Generate button to create a random password for you.
+
+
+The section that relates to the users GLOBAL privileges are privileges you want to assign to this user which apply to ALL databases on the server. It is recommended that you do NOT assign these permissions unless you know exactly what you are doing. It is far more secure to assign seperate user logins to each piece of software or website that will require access to only a particular database. Therefore leave this section BLANK, and then click the Add User button.
+
+After the user is created, you can see it listed on the Users page. Click Edit Privileges to assign access to a specific database.
+
+
+Once again leave the Global Privileges section BLANK. Scroll down to the section titled Database-Specific Privileges. Choose the database you want the user to be able to access from the list, and click GO.
+
+Assign the permissions as shown to provide the user with access to the given database. The following permissions are recommended for compatibility with most modern web-based software applications.
+
+Click GO after selecting the relevant privileges.
+==================
+You can also reset the email account password by login into cPanel >> Email account >> Click Password and Authentication
+=====
+Hello,
+
+Thank you for the email.
+
+We have disabled the backup options on all shared and reseller servers.
+
+Our hosting plans are crafted to host websites with optimum performance and not for storage. The web space cannot be used to store/maintain backups. If you want to backup your website; simply download the data via FTP OR download the databases from phpMyadmin.
+
+You can check our tos link https://www.milesweb.com/tos.php
+
+----------------
+Hello,
+
+Thank you for the email.
+
+I have checked your account and can see that you have not purchased the Backup addon for your account so we wont be able to restore the data as backup is not taken for the account.
+
+We charge Rs 99 ($1.55) per month for complete shared/reseller account backup. We take daily backup of database with retention period of 7 days. Website backup will be taken weekly with retention period of 1 day. Any backup copy maintained by MilesWeb will not have any emails or media file included in it.
+
+For more details you can check the link (https://www.milesweb.com/aup.php)
+=================
+I have send/receive a test mail to our test gmail from enquiry@errorfixer.in and can confirm that emails are sending/receiving without any issue. Please check the screenshot for confirmation.
+
+http://prntscr.com/ktr56x
+
+Please check the at the senders end if they are receiving any bounce back email when they are sending email to enquiry@errorfixer.in. If yes then provide us the bounce back email so that we can investigate further.
+===========
+Please explain in details what exact issue you are facing, steps to replicate the issue, login details if required and screenshot of error message so that we can investigate in the issue.
+===========
+There is an issue with the PHP handler code conflict for your account. I have disabled it from your .htaccess file.
+===========
+Log in to PrestaShop as the administrator.
+On the top menu bar, click Preferences, and then click SEO & URLs.
+Scroll down to the Set shop URL section.
+In the Shop domain text box, type the new domain name that you want PrestaShop to use.
+In the SSL domain text box, type the new domain name that you want PrestaShop to use.
+In the Base URI text box, type the base URI.
+Please make changes accordingly
+Also check url redirection in database as well
+https://www.inmotionhosting.com/support/edu/prestashop-15/change-site-url-in-database
+Once it done your website will work fine with https.
+===========
+
+
+You need to submit the site to google for the issue using the url below:
+
+https://www.google.com/webmasters/tools/home?hl=en&pli=1
+
+steps-
+
+login using your gmail login details
+you will get option add your site(add site name)
+
+and follow the other steps asked there
+google will contact you through the email within 24 hours
+
+=========================================================
+Regarding hack website there are many reason which you much need follow.
+1. Create a strong password in your cPanel account. You can access your cPanel by navigating to your Web hosting servers website and signing into your account. The most important thing to do is keep your passwords a secret. If you must give a password to someone, don't share it with too many people, and be sure to change it when they are done using the access. Don't write down your passwords or save them in a plain text file. I highly recommend you periodically change your passwords.
+
+2. Change your password every 2-3 months. Changing your password often prevents hackers from cracking your password.
+
+3. Validate the files on your server. Do not install any files on your server that you do not trust. These may include free template files or plug-ins. Hackers often plant scripts in what seems to be legit files. These scripts are used to spam your visitors and gather information such as email address, mailing addresses and banking information. Along the same idea, you need to make sure your personal computer does not have viruses, trojans, keyloggers, etc.
+
+4. Keep your scripts and downloaded programs updated. Always upgrade to the latest version of your blog, forum, shopping cart, etc.
+
+Please let me know if you need any further assistance.
+===========================================================
+Hello ,
+
+As per chat discussion below are the login details for SSH for domain samlee.tk
+
+ssh samleetk@cherry.herosite.pro -p 22999
+Password: (use cpanel password for the same domain)
+
+Please let us know if you need any further assistance.
+
+===========================================================
+You can prevent your account from phishing by following below steps,
+
+--------------------------------------------
+Install an Anti-Phishing Toolbar
+Verify a Site’s Security
+Check Your Online Accounts Regularly
+Keep Your Browser Up to Date
+Use Firewalls
+Never Give Out Personal Information
+Use Antivirus Software
+Be careful about opening attachments
+Keep security software on and up to date
+
+===========================================================
+When monitoring the network traffic, we still see spike in the network. We have enabled the protection on the network level and all the traffic is being filtered at this moment.
+
+You might face issues when accessing the websites. However, they are not down with every ISP. We are performing changes in the algorithm so that the genuine traffic isn't blocked. We do not have a ETA at this moment. However, our network team is working on it and getting is fixed asap.
+
+if you're still experiencing issues, you may write back to this case and we will gladly request an expedited investigation on your behalf.
+
+===========================================================
+
+Support URLs:
+(Yahoo)https://io.help.yahoo.com/contact/index?y=PROD_POST&page=contactform&locale=en_US&token=Zh/BBVqXzLHlIbokbUqVWTUbuuQeXGkGnZzhKR2JQ4O6mMQdy9JSWdtWFXvjthcYCRj9bUIFfycOfG+4GOHPHoOGa8HwDO2+0kYRtTcdR8NsLD0dGURpc1B0MBKcI2o/o/mRH4O42kz3lgqmGuc8ri0k6+CMt1UY&selectedChannel=email-icon&yid=
+(Gamil)https://support.google.com/mail/contact/msgdelivery
+(Outlook)https://support.microsoft.com/en-us/getsupport?oaspworkflow=start_1.0.0.0&wfname=capsub&productkey=edfsmsbl3&ccsid=635646486111579910
+https://io.help.yahoo.com/contact/index?y=PROD_POST&page=contactform&locale=en_US&token=Zh/BBVqXzLHlIbokbUqVWTUbuuQeXGkGnZzhKR2JQ4O6mMQdy9JSWdtWFXvjthcYCRj9bUIFfycOfG+4GOHPHoOGa8HwDO2+0kYRtTcdR8NsLD0dGURpc1B0MBKcI2o/o/mRH4O42kz3lgqmGuc8ri0k6+CMt1UY&selectedChannel=email-icon&yid=
+
+===========================================================
+
+
+domain >> MX >> mail.domainname
+mail.domainname >> A >> IP
+
+===========================================================
+// New allowed mime types.
+$mimes['svg'] = 'image/svg+xml';
+$mimes['svgz'] = 'image/svg+xml';
+$mimes['doc'] = 'application/msword';
+
+add code in default theme in functions.php
+
+===========================================================
+You can create  API from whm panel
+Please follow the step
+Home »Development »Manage API Tokens
+if you want to connect DB via API for that you will need to contact your developer
+And ask them to create an API from WHM panel
+===========================================================
+According to Google ‘Deceptive sites are the one which may trick you into doing something dangerous like installing software or revealing your personal information (for example, passwords, phone numbers, or credit cards)’.
+The sites may contain some codes or scripts which are unsafe to load.
+The page may load too many scripts from unauthenticated sources.
+The page may redirect you to some 3rd party unsafe page.
+The page contains too may Ads.
+===========================================================
+
+SMTP Host:mail.domainname
+SMTP Port: 25
+Username: Full email address
+Password: Password of email address.
+===========================================================
+php_flag output_buffering on
+Cannot modify header information
+===========================================================
+Idex file loading other sub links not working use below code
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+===========================================================
+
